@@ -1,0 +1,363 @@
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.home{
+    width: 100%;
+}
+
+.navbar{
+    font-family: myFirstFont;
+}
+
+/*
+    code by Iatek LLC 2018 - CC 2.0 License - Attribution required
+    code customized by Azmind.com
+*/
+@media (min-width: 768px) and (max-width: 991px) {
+    /* Show 4th slide on md if col-md-4*/
+    .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -33.3333%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px) {
+    /* Show 3rd slide on sm if col-sm-6*/
+    .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -50%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+}
+@media (min-width: 576px) {
+    .carousel-item {
+        margin-right: 0;
+    }
+    /* show 2 items */
+    .carousel-inner .active + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .carousel-item-next.carousel-item-left + .carousel-item,
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* farthest right hidden item must be also positioned for animations */
+    .carousel-inner .carousel-item-prev.carousel-item-right {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .carousel-item-prev.carousel-item-right + .carousel-item,
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* MD */
+@media (min-width: 768px) {
+    /* show 3rd of 3 item slide */
+    .carousel-inner .active + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    .carousel-inner .carousel-item-next {
+        position: relative;
+        transform: translate3d(0, 0, 0);
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+/* LG */
+@media (min-width: 991px) {
+    /* show 4th item */
+    .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
+        display: block;
+    }
+    .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
+        transition: none;
+    }
+    /* Show 5th slide on lg if col-lg-3 */
+    .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: absolute;
+        top: 0;
+        right: -25%;  /*change this with javascript in the future*/
+        z-index: -1;
+        display: block;
+        visibility: visible;
+    }
+    /* left or forward direction */
+    .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+    }
+    /* right or prev direction //t - previous slide direction last item animation fix */
+    .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
+        position: relative;
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+        display: block;
+        visibility: visible;
+    }
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(trajan-pro-3.otf);
+}
+
+@font-face{
+    font-family: mySecondFont;
+    src: url(ProximaNova-Regular.otf);
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#first-block{
+    font-family: myFirstFont;
+}
+
+.navbar{
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color: white;
+    padding-top: 8px;
+}
+
+.home-inner{
+    min-height: 600px;
+    /* background-image: url(header.jpg); */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(header.jpg);
+    background-size: cover;
+    background-position: top;
+    margin-top: 30px;
+}
+
+.btn-donate{
+    background-color: #ed1c2b;
+    font-size: 15px;
+}
+
+.btn-news{
+    color: #ed1c2b;
+    border-color: #ed1c2b;
+    font-size: 15px;
+    width: 100%;
+}
+
+.btn-news:hover{
+    color: white;
+    background-color: #ed1c2b;
+    
+}
+
+.caption{
+    width: 100%;
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+    color: white;
+    text-transform: uppercase;
+}
+
+.caption h1{
+    font-size: 45px;
+    font-weight: 500;
+}
+
+.caption h3{
+    font-size: 30px;
+}
+
+.block2-1 h1{
+    padding-top: 45px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-family: myFirstFont;
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.block2-1{
+    padding-bottom: 45px;
+}
+
+#features{
+    padding-top: 45px;
+    padding-bottom: 30px;
+    font-family: myFirstFont;
+    width: 100%;
+    background-color: #eff1f0;
+}
+
+#features h1{
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+#features h2{
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#features h3{
+    font-size: 20px;
+}
+
+.fa {
+    color: #ed1c2b;
+}
+.fa-footer {
+    color: white;
+}
+
+.third-block{
+    font-family: mySecondFont;
+    padding-bottom: 30px;
+}
+
+.third-block h2{
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.third-block h1{
+    padding-top:45px;
+    padding-bottom: 30px;
+    font-size: 30px;
+    text-align: center;
+    font-family: myFirstFont;
+}
+
+.third-block img{
+    width: 100%;
+    height: 150px;
+}
+
+.news{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.view-archive{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-archive{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #2a313f;
+    font-family: myFirstFont;
+}
+
+.footer{
+    background-color: #2a313f;
+}
+
+.footer h1{
+    padding-top: 45px;
+    text-align: center;
+    color: white;
+    font-family: myFirstFont;
+}
+
+.footer h2{
+    text-align: center;
+    color: white;
+    font-family: mySecondFont;
+    font-size: 20px;
+}
+
+.footer a{
+    color: white;
+    font-family: mySecondFont;
+}
+
+.footer p{
+    color: white;
+    font-family: mySecondFont;
+}
+
+ul li{
+    list-style: none;
+    color: white;
+}
+hr{
+    color: #5a5d5d;
+    background-color: #5a5d5d;
+    border-color: #5a5d5d;
+}
+.footer-last p{
+    text-align: center;
+    color: #5a5d64!important;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+.input-area{
+    background-color: #41454e;
+    border-color: #41454e;
+}
+
+.footer button{
+    background-color: #696d78;
+    border-color: #696d78;
+}
+
+.footer button:hover{
+    background-color: grey;
+    border-color: grey;
+}
