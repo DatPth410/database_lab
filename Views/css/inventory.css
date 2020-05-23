@@ -331,11 +331,51 @@ hr{
 
 
 
+.detail{
+  width: 85%;
+  margin : 0 auto;
+}
 
+.detail p{
+  font-family: mySecondFont;
+  color: black;
+  font-size: 15px;
+}
 
+.detail ul li{
+  font-family: mySecondFont;
+  font-size: 15px;
+  line-height: 30px;
+}
 
+.detail ul {
+  list-style: none;
+}
 
+.detail ul li::before {
+  content: "\2022";
+  color:#ed1c2b;
+  font-weight: bold;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1em;
+}
 
+.request-modal{
+  font-family: mySecondFont;
+}
+
+.request-modal h1{
+  text-align: center;
+  font-size: 16px;
+  font-family: myFirstFont;
+}
+
+.request-btn:hover{
+  color: #41454e;
+  background-color: #eff1f0;
+  border-color: #eff1f0;
+}
 
 
 
