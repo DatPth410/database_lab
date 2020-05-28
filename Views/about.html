@@ -14,10 +14,82 @@
 	<link rel="stylesheet" href="css/inventory.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 	
-	<title>Blog</title>	
+	<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  margin: 0;
+		}
+
+		html {
+		  box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+
+		.column {
+		  float: left;
+		  width: 33.3%;
+		  margin-bottom: 16px;
+		  padding: 0 8px;
+		}
+
+		.card {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		  margin: 8px;
+		}
+
+		.about-section {
+		  padding: 50px;
+		  text-align: center;
+		  background-color: #474e5d;
+		  color: white;
+		}
+
+		.container {
+		  padding: 0 16px;
+		}
+
+		.container::after, .row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+		.title {
+		  color: grey;
+		}
+
+		.button {
+		  border: none;
+		  outline: 0;
+		  display: inline-block;
+		  padding: 8px;
+		  color: white;
+		  background-color: #000;
+		  text-align: center;
+		  cursor: pointer;
+		  width: 100%;
+		}
+
+		.button:hover {
+		  background-color: #555;
+		}
+
+		@media screen and (max-width: 650px) {
+		  .column {
+			width: 100%;
+			display: block;
+		  }
+		}
+		
+	</style>
+	
+	<title>about</title>	
 </head>
 <body>
-	<div id = "blog">
+	<div id = "about">
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
 				<a class="navbar-brand" href="home.html"><img src="css/icon1.png" alt=""></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
@@ -45,92 +117,58 @@
 						</li>
 					</ul>
 				</div>
-		</nav>
+		</nav>	
 		
-		<!--Banner-->
-		<div class = "jumbotron jumboImg jumbotron-fluid text-white text-center">
+		<div class = "jumbotron jumbotron-fluid bg-dark text-white text-center">
 			<div class = "container" style="padding-top: 100px;">		
-				<h1 class = "display-1"> BLOG </h1> 
-				<p class = "lead"> BLOG DESCRIPTION </p>
+				<h1 class = "display-1"> About Schtool </h1> 
+				<p class = "lead"> A Database Project NOT Carried By Me </p>
 				
 			</div>
 		</div>
 		
-		<!--Featured article-->
-		<div class="card">
-			<div class="row pt-4 pb-4 justify-content-center">
-				<div class="col-7">
-					<a href = "demoblog.html">
-					<img src="assets/img/gondola/gondola t90 cropped.jpg" class="w-100">
-					</a>
-				</div>
-				
-				<div class="col-3">
-					<div class="card-block">
-						<h4 class="card-title"> <a href = "demoblog.html"> Gondola was not a mistake.  </a> </h4>
-						<p class="card-text"> Gondolas are relaxed, harmless creatures that observe their environment. They rarely interfere anything, but just keep observing. They rarely talk, just look around and smile. This makes them very different from other creatures such as spurdo, that feel, pepe, yoba, etc. Gondola is the silent walker. Having no hands he embodies the Taoist principle of wu-wei (non-action) while his smiling facial expression shows his utter and complete acceptance of the world as it is.
-						</p>
-					</div>
-				</div>
+		<h2 style="text-align:center">Our Team</h2>
+		
+		<div class="row">
+		  <div class="column">
+			<div class="card">
+			  <img src="assets/img/about/hai.jpg" style="width:100%">
+			  <div class="container">
+				<h2>Hai Trinh</h2>
+				<p class="title">Founder, team lead(?)</p>
+				<p>One-woman army, basically a god.</p>
+				<p>Hai@example.com</p>
+				<p><button class="button">Contact</button></p>
+			  </div>
+			</div>
+		  </div>
 
+		  <div class="column">
+			<div class="card">
+			  <img src="assets/img/about/dat.jpg" style="width:100%">
+			  <div class="container">
+				<h2>Thanh Dat</h2>
+				<p class="title">Anothe carrier, team lead(?)</p>
+				<p>Another carrier, a god.</p>
+				<p>mike@example.com</p>
+				<p><button class="button">Contact</button></p>
+			  </div>
 			</div>
-		</div>
-		<br>
-		
-		<!--Other articles-->
-		<div class="container-fluid">
-			<div class = "row justify-content-center">
-				<div class = "col-4">
-					<div class = "card h-100">
-						<a href = "demoblog.html">
-						<img src="assets/img/gondola/gondola coffee.jpg" class="card-img-top img-fluid h-75">
-						</a>
-						<div class = "card-block">
-							<a href = "demoblog.html">
-							<h5 class="card-title">Gondola Explained.</h5>
-							<h6 class="card-title">By Anon</h6>
-							</a>
-							<p> Gondola is the perfect metaphor, in many ways, to our own situation. He appears in various places, all over the world, all throughout time, with no effort at all. Incredible right? Just like us, really; with the click of a button, we can view any piece of art, any historical event, in the blink of an eye.
-							</p>
-						</div>	
-					</div>
-				</div>
-				
-				<div class = "col-4">
-					<div class = "card h-100">
-						<a href = "demoblog.html">
-						<img src="assets/img/gondola/gondola bar.jpg" class="card-img-top img-fluid h-75">
-						</a>
-						<div class = "card-block">
-							<a href = "demoblog.html">
-							<h5 class="card-title">Gondola Explained.</h5>
-							<h6 class="card-title">By Anon</h6>
-							</a>
-							<p> Gondola is the perfect metaphor, in many ways, to our own situation. He appears in various places, all over the world, all throughout time, with no effort at all. Incredible right? Just like us, really; with the click of a button, we can view any piece of art, any historical event, in the blink of an eye.
-							</p>
-						</div>	
-					</div>
-				</div>
-				
-				<div class = "col-4">
-					<div class = "card h-100">
-						<a href = "demoblog.html">
-						<img src="assets/img/gondola/gondola winter park.jpg" class="card-img-top img-fluid h-75">
-						</a>
-						<div class = "card-block">
-							<a href = "demoblog.html">
-							<h5 class="card-title">Gondola Explained.</h5>
-							<h6 class="card-title">By Anon</h6>
-							</a>
-							<p> Gondola is the perfect metaphor, in many ways, to our own situation. He appears in various places, all over the world, all throughout time, with no effort at all. Incredible right? Just like us, really; with the click of a button, we can view any piece of art, any historical event, in the blink of an eye. 
-							</p>
-						</div>	
-					</div>
-				</div>
-				
+		  </div>
+  
+		  <div class="column">
+			<div class="card">
+			  <img src="assets/img/about/happy1.jpg" style="width:100%">
+			  <div class="container">
+				<h2>me (Khoi Vu Trong)</h2>
+				<p class="title">Happy Merchant</p>
+				<p>Autistic chimpanzee.</p>
+				<p>john@example.com</p>
+				<p><button class="button">Contact</button></p>
+			  </div>
 			</div>
+		  </div>
 		</div>
-		<br>
 		
 		<!--Footer-->
         <div class="footer">
@@ -184,7 +222,6 @@
             
         </div>
         <!--End footer-->
-		
 	</div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
